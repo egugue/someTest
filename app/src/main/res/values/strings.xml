@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">someTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_custom_action_bar">CustomActionBarActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_some_style_action_bar">SomeStyleActionBarActivity</string>
+    <string name="title_activity_app_list">AppListActivity</string>
+
+</resources>
