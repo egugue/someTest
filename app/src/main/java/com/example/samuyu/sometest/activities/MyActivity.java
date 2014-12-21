@@ -6,11 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.samuyu.sometest.R;
-import com.example.samuyu.sometest.utils.Depended;
-import com.example.samuyu.sometest.utils.DependedModule;
+import com.example.samuyu.sometest.activities.iosched.DetailActivity;
+import com.example.samuyu.sometest.activities.iosched.ImageListActivity;
 
 
 import butterknife.ButterKnife;

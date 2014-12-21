@@ -48,11 +48,11 @@
             android:theme="@style/NoActionBarTheme" >
         </activity>
         <activity
-            android:name=".activities.DetailActivity"
+            android:name=".activities.iosched.DetailActivity"
             android:label="@string/title_activity_detail" >
         </activity>
         <activity
-            android:name=".activities.ImageListActivity"
+            android:name=".activities.iosched.ImageListActivity"
             android:label="@string/title_activity_image_list" >
         </activity>
     </application>

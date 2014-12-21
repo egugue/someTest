@@ -1,15 +1,15 @@
-package com.example.samuyu.sometest.activities;
+package com.example.samuyu.sometest.activities.iosched;
 
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.example.samuyu.sometest.R;
+import com.example.samuyu.sometest.activities.BaseActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.ButterKnife;
