@@ -1,5 +1,6 @@
 package com.example.samuyu.sometest.adapters;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,8 @@ import java.util.List;
  */
 public class AppAdapter extends ArrayAdapter<AppInfo>{
     private static final String TAG = AppAdapter.class.getSimpleName();
+
+    private int mLastPosition = -1;
 
     public AppAdapter(Context context) {
         super(context, -1, new ArrayList<AppInfo>());
@@ -42,12 +45,18 @@ public class AppAdapter extends ArrayAdapter<AppInfo>{
 
         AppInfo appInfo = getItem(position);
         holder.bindView(appInfo);
-        if ( appInfo.isForbidden ) {
-            //holder.appName.setBackgroundColor(R.color.green);
-            //convertView.setBackgroundColor(R.color.green);
-        }
 
-        //((ListView)parent).setItemChecked(position, appInfo.isForbidden);
+        // ここの判定をいれなければ上に行った時もアニメーションする
+        /*
+        if(mLastPosition < position){
+
+            // ここでアニメーションを設定する
+            ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(holder.appName, "alpha", 0f, 1f );
+            objectAnimator.setDuration( 500 );
+            objectAnimator.start();
+            mLastPosition = position;
+        }
+        */
 
         return convertView;
     }

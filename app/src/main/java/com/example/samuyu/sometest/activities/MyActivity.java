@@ -6,13 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.samuyu.sometest.R;
+import com.example.samuyu.sometest.utils.Depended;
+import com.example.samuyu.sometest.utils.DependedModule;
+
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MyActivity extends Activity {
+
+    /*
+    @Inject Depended mDepended;
+
+    private MyActivityComponent component;
+    @Component(modules = DependedModule.class)
+    interface MyActivityComponent {
+        void inject();
+    }
+    */
 
     public static Intent createIntent(Context context) {
         Intent intent = new Intent(context, MyActivity.class);
@@ -24,33 +39,55 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-        Button openActionBarButton = (Button)findViewById(R.id.open_cutstom_activity_button);
-        openActionBarButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCustomActionBarActivity();
-            }
+        ButterKnife.inject(this);
 
-        });
+        //component = Dagger_MyActivityComponent.create();
+        //component.inject();
 
-        Button someActionBarButton = (Button)findViewById(R.id.open_some_style_actionbar_button);
-        someActionBarButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSomeActionBarActivity();
-            }
-        });
-
-       Button appListButton = (Button)findViewById(R.id.button3);
-        appListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = AppListActivity.createIntent(getApplicationContext());
-                startActivity(intent);
-            }
-        });
+        /*
+        ObjectGraph objectGraph = ObjectGraph.create(new DependedModule());
+        objectGraph.inject(this);
+        */
     }
 
+
+    @OnClick(R.id.open_cutstom_activity_button)
+    public void openCustomActionBarActivity() {
+        Intent intent = CustomActionBarActivity.createIntent(getApplicationContext());
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
+    }
+
+    @OnClick(R.id.open_some_style_actionbar_button)
+    public void openSomeActionBarActivity() {
+        Intent intent = SomeStyleActionBarActivity.createIntent(getApplicationContext());
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
+    }
+
+    @OnClick(R.id.button3)
+    public void openAppListActivity() {
+        Intent intent = AppListActivity.createIntent(getApplicationContext());
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.open_toobar_activity)
+    public void openToolbarActivity() {
+        Intent intent = ToolbarActivity.createIntent(getApplicationContext());
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.open_detail_activity_button)
+    public void openDetailActivity() {
+        Intent intent = DetailActivity.createIntent(getApplicationContext());
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.open_image_list_activity_button)
+    public void openImageListActivity() {
+        Intent intent = ImageListActivity.createIntent(getApplicationContext());
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,15 +109,4 @@ public class MyActivity extends Activity {
     }
 
 
-    private void openCustomActionBarActivity() {
-        Intent intent = CustomActionBarActivity.createIntent(getApplicationContext());
-        startActivity(intent);
-        overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
-    }
-
-    private void openSomeActionBarActivity() {
-        Intent intent = SomeStyleActionBarActivity.createIntent(getApplicationContext());
-        startActivity(intent);
-        overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
-    }
 }

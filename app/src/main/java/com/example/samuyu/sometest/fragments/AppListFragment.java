@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.example.samuyu.sometest.R;
 import com.example.samuyu.sometest.adapters.AppAdapter;
 import com.example.samuyu.sometest.entities.AppInfo;
+import com.example.samuyu.sometest.utils.MoreLoadListener;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -53,6 +54,15 @@ public class AppListFragment extends ListFragment {
 
         List<AppInfo> appInfoList = AppInfo.readAppInfo(mContext);
         mAdapter.addAll(appInfoList);
+
+        mAppListView = (ListView)view.findViewById(android.R.id.list);
+
+        mAppListView.setOnScrollListener(new MoreLoadListener(mAppListView, null) {
+            @Override
+            public void onLoadMore() {
+                Log.d("HOGE", "onLoadMore");
+            }
+        });
 
         Button button =(Button)view.findViewById(R.id.sort_button);
         button.setOnClickListener(new View.OnClickListener() {

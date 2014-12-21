@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.samuyu.sometest" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -39,6 +41,19 @@
         <activity
             android:name=".activities.AppListActivity"
             android:label="@string/title_activity_app_list" >
+        </activity>
+        <activity
+            android:name=".activities.ToolbarActivity"
+            android:label="@string/title_activity_toolbar"
+            android:theme="@style/NoActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".activities.DetailActivity"
+            android:label="@string/title_activity_detail" >
+        </activity>
+        <activity
+            android:name=".activities.ImageListActivity"
+            android:label="@string/title_activity_image_list" >
         </activity>
     </application>
 

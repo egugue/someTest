@@ -42,4 +42,26 @@
         android:id="@+id/button3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToolbarActivity"
+        android:id="@+id/open_toobar_activity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DetailActivity"
+        android:background="@drawable/simple_shadow"
+        android:id="@+id/open_detail_activity_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ImageListActivity"
+        android:background="?attr/selectableItemBackground"
+        android:id="@+id/open_image_list_activity_button"/>
 </LinearLayout>

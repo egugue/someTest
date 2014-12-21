@@ -14,7 +14,7 @@ import com.example.samuyu.sometest.entities.AppInfo;
 
 import java.util.List;
 
-public class AppListActivity extends Activity {
+public class AppListActivity extends BaseActivity {
 
     public static Intent createIntent(Context context) {
         Intent intent = new Intent(context, AppListActivity.class);
