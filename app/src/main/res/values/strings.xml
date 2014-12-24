@@ -13,7 +13,7 @@
     <string name="title_activity_toolbar">ToolbarActivity</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_image_list">ImageListActivity</string>
-
     <string name="transiton_name_image">transtionImage1</string>
+    <string name="title_activity_music_detail">MusicDetailActivity</string>
 
 </resources>

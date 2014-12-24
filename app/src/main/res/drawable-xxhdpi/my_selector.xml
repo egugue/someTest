@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- チェックして、かつタップした瞬間 -->
+    <item android:drawable="@drawable/add_schedule_fab_checked_pressed"
+          android:state_checked="true"
+          android:state_pressed="true" />
+
+    <!-- チェックして、かつタップしおわった瞬間 -->
+    <item android:drawable="@drawable/add_schedule_fab_checked_default"
+          android:state_checked="true" />
+
+
+    <!-- チェックされていなく、でもタップした瞬間 -->
+    <item android:drawable="@drawable/add_schedule_fab_unchecked_pressed"
+          android:state_pressed="true" />
+
+    <!-- チェックされていなく、かつタップし終わった -->
+    <item android:drawable="@drawable/add_schedule_fab_unchecked_default" />
+
+</selector>

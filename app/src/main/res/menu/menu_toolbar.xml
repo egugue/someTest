@@ -11,5 +11,5 @@
           android:icon="@drawable/ic_action_search"
           android:title="Search"
           android:orderInCategory="1"
-          app:showAsAction="always" />j
+          app:showAsAction="always" />
 </menu>
