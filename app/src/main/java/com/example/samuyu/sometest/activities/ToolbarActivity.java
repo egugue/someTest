@@ -110,6 +110,8 @@ public class ToolbarActivity extends BaseActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.menu_search) {
+           //TODO: do shomething
         }
 
         return super.onOptionsItemSelected(item);

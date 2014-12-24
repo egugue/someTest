@@ -55,6 +55,14 @@
             android:name=".activities.iosched.ImageListActivity"
             android:label="@string/title_activity_image_list" >
         </activity>
+        <activity
+            android:name=".activities.music.MusicDetailActivity"
+            android:label="@string/title_activity_music_detail"
+            android:parentActivityName=".activities.BaseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.samuyu.sometest.activities.BaseActivity" />
+        </activity>
     </application>
 
 </manifest>
